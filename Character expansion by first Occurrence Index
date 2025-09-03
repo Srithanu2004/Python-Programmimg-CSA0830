@@ -1,0 +1,13 @@
+def expand_string(s: str) -> str:
+    first_index = {}  
+    result = []
+    
+    for i, ch in enumerate(s):
+        if ch not in first_index:
+            first_index[ch] = i + 1  
+        repeat_count = first_index[ch]
+        result.append(ch * repeat_count)
+    
+    return "-".join(result)
+s = "abcaba"
+print(expand_string(s))  # a-bb-ccc-a-bb-a
