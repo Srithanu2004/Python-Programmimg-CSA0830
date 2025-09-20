@@ -1,0 +1,5 @@
+class Solution:
+    def rotateArray(self, arr, k):
+        n = len(arr)
+        k = k % n
+        return arr[-k:] + arr[:-k]
