@@ -1,0 +1,14 @@
+def decimal_to_binary_sum(num):
+    # Convert to binary (without '0b' prefix)
+    binary = bin(num)[2:]
+    
+    # Calculate sum of digits
+    digit_sum = sum(int(digit) for digit in binary)
+    
+    # Print results
+    print("Binary number:", binary)
+    print("Sum of binary digits:", digit_sum)
+
+# Example usage
+number = int(input("Enter a decimal number: "))
+decimal_to_binary_sum(number)
